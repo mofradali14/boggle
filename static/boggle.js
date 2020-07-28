@@ -36,7 +36,7 @@ class BoggleGame {
       .addClass(`msg ${cls}`);
   }
 
-  /* handle submission of word: if unique and valid, score & show */
+  /* handle submission of word: if unique and valid, update score */
 
   async handleSubmit(evt) {
     evt.preventDefault();
@@ -85,7 +85,7 @@ class BoggleGame {
     }
   }
 
-  /* end of game: score and update message. */
+  /* end of game: show score and update message. */
 
   async scoreGame() {
     $(".add-word", this.board).hide();
