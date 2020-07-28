@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Boggle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/boggle.css">
+    
+  </head>
+  <body>
+    <h1>Boggle</h1>
+    <section id="boggle">
+
+      <table class="board">
+        <tbody>
+          {% for row in board %}
+          <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <p>High Score: 
+        <b>{{ highscore }}</b> 
+        in {{ nplays }} plays
+      </p>
+
+      <p>
+        Score: <b class="score">0</b>
+        Seconds Left: <b class="timer"></b>
+      </p>
+
+      <div id="form">
+        <form method="POST" class="add-word">
+        <input name="word" class="word" placeholder="Guess a word" autofocus>
+        <button>Enter</button>
+      </form>
+    </div>
+      
+
+      <p class="msg">
+        <!-- Msg responses from JS -->
+      </p>
+
+      <ul class="words">
+        <!-- JS inputs word quessed right here -->
+      </ul>
+
+    </section>
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/boggle.js"></script>
+    <script>
+      let game = new BoggleGame("boggle", 60);
+    </script>
+  </body>
+</html>

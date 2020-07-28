@@ -1,0 +1,97 @@
+.board {
+	border: 3px white outset;
+	border-radius: 9px;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 250%;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.board td {
+	text-align: center;
+	width: 2em;
+	height: 2em;
+}
+
+.msg {
+	padding: 1em;
+	text-align: center;
+}
+
+.msg.ok {
+	color: white;
+	background-color: green;
+	border: 3px white outset;
+	border-radius: 9px;
+}
+
+.msg.err {
+	color: white;
+	background-color: tomato;
+	border: 3px white outset;
+	border-radius: 9px;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+	font-family: 'Bangers';
+	color: white;
+	text-align: center;
+	font-size: 300%;
+	text-shadow: 4px 4px black;
+}
+
+p {
+	text-align: center;
+	color: white;
+}
+#form {
+	text-align: center;
+}
+li {
+	text-align: center;
+	list-style: none;
+	color: white;
+	font-size: 1.5rem;
+}
+input {
+	border-radius: 10px;
+	height: 2.5rem;
+	width: 50%;
+	font-size: 1.7rem;
+	background-color: rgb(87, 86, 86);
+	color: white;
+}
+button {
+	padding: 1rem;
+	height: 3rem;
+	border-radius: 10px;
+	background-color: rgb(87, 86, 86);
+	color: white;
+}
+button:hover {
+	background-color: white;
+	color: rgb(87, 86, 86);
+}
+::placeholder {
+	color: rgb(172, 161, 161);
+}
